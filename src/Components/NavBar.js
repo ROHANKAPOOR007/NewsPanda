@@ -1,14 +1,18 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 export class NavBar extends Component {
 
+
+
   render() {
+
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
+          <Link className="navbar-brand" to="/">
             NewsPanda
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -23,46 +27,93 @@ export class NavBar extends Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="/">
+                <Link className="nav-link" aria-current="page" to="/">
                   Home
-                </a>
+                </Link>
               </li>
 
+                {/* <li className="nav-item">
+                  <Link className="nav-link" to="/about">
+                    About
+                  </Link>
+                </li> */}
+
+                <li className="nav-item">
+                <Link className="nav-link" to="/business">
+                    Buniness
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link" to="/health">
+                    Health
+                  </Link>
+                </li>
+              
               <li className="nav-item">
-                <a className="nav-link" href="/about">
-                  About
-                </a>
+                  <Link className="nav-link" to="/entertainment">
+                  Entertainment 
+                </Link>
               </li>
+              
+              {/* <li className="nav-item">
+                  <Link className="nav-link" to="/general">
+                    General 
+                  </Link>
+                </li> */}
+
+                <li className="nav-item">
+                  <Link className="nav-link" to="/science">
+                    Science
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link" to="/sports">
+                    Sports
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link" to="/technology">
+                    Technology
+                  </Link>
+                </li>
+              
+              
+               
+               
+              
 
               {/* <li className="nav-item dropdown">
-                <a
+                <Link
                   className="nav-link dropdown-toggle"
-                  href="/"
+                  to="/"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                  
                 >
                   Dropdown
-                </a>
+                </Link>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="/">
+                    <Link className="dropdown-item" to="/">
                       Action
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/">
+                    <Link className="dropdown-item" to="/">
                       Another action
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/">
+                    <Link className="dropdown-item" to="/">
                       Something else here
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li> */}
