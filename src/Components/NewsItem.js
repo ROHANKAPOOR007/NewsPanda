@@ -1,18 +1,29 @@
 import React, { Component } from 'react'
 
 export class NewsItem extends Component {
+    
   render() {
-    let {title, description} = this.props;
-    return (
-        <div className="card" style={{ width: "18rem" }}>
-            <img src="https://i.cbc.ca/1.6883244.1687368875!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_620/toronto-trudeau-20190904.jpg" className="card-img-top" alt="..." />
+    let {title, description, imageUrl, newsUrl} = this.props;
 
-            <div className="card-body">
-                <h5 className="card-title">{title}</h5>
-                <p className="card-text">
-                    {description}
-                </p>
-                <a href="/" className="btn btn-primary">Go somewhere</a>
+    return (
+        <div className='my-3'>
+
+            <div className="card" style={{ width: "18rem" }}>
+                <img src={!imageUrl? "https://t3.ftcdn.net/jpg/03/27/55/60/360_F_327556002_99c7QmZmwocLwF7ywQ68ChZaBry1DbtD.jpg": imageUrl} className="card-img-top" alt="..." />
+
+                <div className="card-body">
+                    <h5 className="card-title">
+                        {title}. . . 
+                        </h5>
+
+                    <p className="card-text">
+                        {description}. . .
+                    </p>
+
+                    <a href={newsUrl} target='_blank' className="btn btn-sm btn-dark" rel="noreferrer"> Read More </a>
+
+                </div>
+
             </div>
 
         </div>
